@@ -23,18 +23,18 @@ export default function FlightControlForm() {
       positionCible: { idGpsModule: parseInt(form.gpsId) }
     })
       .then(() => {
-        alert('FlightControl enregistré avec succès ✅');
+        alert('FlightControl enregistré avec succès ');
         setForm({ vitesse: '', altitude: '', droneId: '', gpsId: '' }); // reset form
       })
       .catch((err) => {
-        alert("Erreur lors de l'enregistrement ❌");
+        alert("Erreur lors de l'enregistrement ");
         console.error(err);
       });
   };
 
   return (
     <form onSubmit={handleSubmit} className="container mt-5">
-      <h2 className="mb-3">✈️ Ajouter un FlightControl</h2>
+      <h2 className="mb-3"> Ajouter un FlightControl</h2>
       <div className="row g-2 mb-3">
         <div className="col-md-3">
           <input
